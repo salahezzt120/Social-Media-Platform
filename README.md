@@ -10,7 +10,10 @@
 A simple social media platform built with **React** and **Supabase**, allowing users to create posts, chat privately, and interact seamlessly.
 
 ---
+## 🖼️ Banner
+![social Banner](banner-web.png)
 
+---
 ## 🖼️ Screenshots  
 ### Home Page  
 ![Home Page](screenshot/posts.png)  
