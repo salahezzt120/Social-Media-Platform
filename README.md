@@ -13,13 +13,16 @@ A simple social media platform built with **React** and **Supabase**, allowing u
 
 ## 🖼️ Screenshots  
 ### Home Page  
-![Home Page](screenshot1.png)  
+![Home Page](screenshot/posts.png)  
 
-### User Profile  
-![User Profile](screenshot2.png)  
+### Login Page  
+![User Profile](screenshot/login.png)  
+
+### Signup Page  
+![User Profile](screenshot/signup.png)  
 
 ### Messaging System  
-![Messaging System](screenshot3.png)  
+![Messaging System](screenshot/users.png)  
 
 ---
 
