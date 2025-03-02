@@ -1,0 +1,247 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f2f5; /* Facebook-like background */
+}
+
+.header {
+  background-color: #fff;
+  color: #1c1e21;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header button {
+  background-color: #4267b2; /* Facebook blue */
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-content {
+  flex: 3;
+  padding: 20px;
+  background-color: #fff; /* White main content */
+  color: #1c1e21;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff; /* White sidebar */
+  color: #1c1e21;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 2px solid #03a9f4; /* Blue border */
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.sidebar li:hover,
+.sidebar li.selected {
+  background-color: #f0f2f5;
+}
+
+.user-circle {
+  display: inline-block;
+  width: 30px; /* Increased size */
+  height: 30px; /* Increased size */
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-right: 10px;
+  background-image: url('https://via.placeholder.com/30'); /* Placeholder image */
+  background-size: cover;
+  background-position: center;
+}
+
+.add-post {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.add-post textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+.add-post-button {
+  padding: 10px 15px;
+  background-color: #1877f2; /* Facebook blue */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.post-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.post-author .user-circle {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.post-content {
+  color: #1c1e21;
+  background-color: #f0f2f5; /* Light gray background for content */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1877f2; /* Facebook blue */
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.messaging-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.messaging-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.messaging-header button {
+  background-color: #ddd;
+  color: #1c1e21;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.message-list {
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  color: #1c1e21;
+  padding: 5px;
+}
+
+.message {
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.message.sent {
+  background-color: #e4e6eb;
+  color: #1c1e21;
+  text-align: right;
+}
+
+.message.received {
+  background-color: #f0f2f5;
+  color: #1c1e21;
+  text-align: left;
+}
+
+.message-input {
+  display: flex;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+  border-radius: 5px;
+}
+
+.message-input button {
+  padding: 8px 12px;
+  background-color: #1877f2; /* Facebook blue */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
