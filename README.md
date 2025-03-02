@@ -1,20 +1,42 @@
 # Social Media Platform
 
-A simple social media platform built with React and Supabase.
+![Version](https://img.shields.io/badge/version-1.0-blue)  
+![License](https://img.shields.io/badge/license-MIT-green)  
+![Status](https://img.shields.io/badge/status-In_Progress-yellow)  
+![React](https://img.shields.io/badge/React-18.x-blue)  
+![Supabase](https://img.shields.io/badge/Supabase-Database-orange)  
 
-## Features
+## 📋 Project Description  
+A simple social media platform built with **React** and **Supabase**, allowing users to create posts, chat privately, and interact seamlessly.
 
-- User authentication (login/signup)
-- Post creation and display
-- User list
-- Private messaging
+---
+
+## 🖼️ Screenshots  
+### Home Page  
+![Home Page](screenshot1.png)  
+
+### User Profile  
+![User Profile](screenshot2.png)  
+
+### Messaging System  
+![Messaging System](screenshot3.png)  
+
+---
+
+## 🌟 Features  
+- 🔑 **User Authentication** – Secure login and signup with Supabase  
+- 📝 **Post Creation & Display** – Share thoughts with others  
+- 👥 **User List** – See who’s online  
+- 💬 **Private Messaging** – Chat with other users in real-time  
+
+---
 
 ## Installation
 
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/salahezzt120/Social-Media-Platform.git
     ```
 
 2.  **Navigate to the project directory:**
