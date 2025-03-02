@@ -11,7 +11,7 @@ A simple social media platform built with **React** and **Supabase**, allowing u
 
 ---
 ## 🖼️ Banner
-![social Banner](banner-web.png)
+![social Banner](screenshot/banner-web)
 
 ---
 ## 🖼️ Screenshots  
