@@ -1,131 +1,149 @@
-# Social Media Platform
+🔥 WiFi Handshake Toolkit
+https://img.shields.io/badge/version-1.0-blue
+https://img.shields.io/badge/license-MIT-green
+https://img.shields.io/badge/status-In_Progress-yellow
+https://img.shields.io/badge/Python-3.x-orange
+https://img.shields.io/badge/Dependencies-Aircrack--ng-red
+https://img.shields.io/badge/Scapy-Network_Tools-purple
 
-![Version](https://img.shields.io/badge/version-1.0-blue)  
-![License](https://img.shields.io/badge/license-MIT-green)  
-![Status](https://img.shields.io/badge/status-In_Progress-yellow)  
-![React](https://img.shields.io/badge/React-18.x-blue)  
-![Supabase](https://img.shields.io/badge/Supabase-Database-orange)  
+📋 Project Description
+An automated WiFi handshake capture, cracking, and conversion toolkit built with Python.
+Designed for educational & lab use only, it provides a simple interactive terminal GUI with colorful menus, target selection, and built-in cracking support.
 
-## 📋 Project Description  
-A simple social media platform built with **React** and **Supabase**, allowing users to create posts, chat privately, and interact seamlessly.
+🌟 Features
+📡 Network Scanning – Scan WiFi networks with airodump-ng
 
----
-## 🖼️ Banner
-![social Banner](screenshot/banner-web)
+🔓 Handshake Capture – Capture WPA/WPA2 handshakes automatically
 
----
-## 🖼️ Screenshots  
-### Home Page  
-![Home Page](screenshot/posts.png)  
+🔑 Password Cracking – Crack handshakes using aircrack-ng and a wordlist
 
-### Login Page  
-![User Profile](screenshot/login.png)  
+🔄 Convert to Hashcat Format – .cap → .hc22000 via hcxpcapngtool
 
-### Signup Page  
-![User Profile](screenshot/signup.png)  
+⚙️ Configurable Settings – Adjust scan duration, deauth count, wait time
 
-### Messaging System  
-![Messaging System](screenshot/users.png)  
+🎨 Colorful Terminal UI – Easy navigation with menus & tables
 
----
+⚠️ Disclaimer
+This toolkit is strictly for educational and lab/testing use.
+⚡ Do not use against networks you don't own or have permission to test.
 
-## 🌟 Features  
-- 🔑 **User Authentication** – Secure login and signup with Supabase  
-- 📝 **Post Creation & Display** – Share thoughts with others  
-- 👥 **User List** – See who’s online  
-- 💬 **Private Messaging** – Chat with other users in real-time  
+🛠️ Installation
+Clone the repository
 
----
+bash
+git clone https://github.com/<your-username>/auto_aircrack_lab.git
+cd auto_aircrack_lab
+Install dependencies
 
-## Installation
+bash
+pip install -r requirements.txt
+Install system tools (Debian/Ubuntu/Kali)
 
-1.  **Clone the repository:**
+bash
+sudo apt update
+sudo apt install aircrack-ng hcxtools
+Make script executable
 
-    ```bash
-    git clone https://github.com/salahezzt120/Social-Media-Platform.git
-    ```
+bash
+chmod +x auto_aircrack_lab.py
+⚙️ Configuration
+Default settings are inside the script:
 
-2.  **Navigate to the project directory:**
+python
+SCAN_DURATION = 20      # seconds for scan
+DEAUTH_PACKETS = 5      # number of deauth packets
+CAPTURE_WAIT = 15       # wait after deauth
+You can update them via the Settings Menu inside the tool.
 
-    ```bash
-    cd social-media-platform
-    ```
+▶️ Running the Tool
+Start the script (requires root):
 
-3.  **Install dependencies:**
+bash
+sudo ./auto_aircrack_lab.py wlan0
+Follow the interactive menu:
 
-    ```bash
-    npm install
-    ```
+Select target network(s)
 
-## Configuration
+Capture handshake(s)
 
-1.  **Create a `.env` file** in the project root with the following variables:
+Crack or convert them
 
-    ```
-    VITE_SUPABASE_URL=<your_supabase_url>
-    VITE_SUPABASE_ANON_KEY=<your_supabase_anon_key>
-    ```
+📦 Dependencies
+System Tools:
+aircrack-ng
 
-    Replace `<your_supabase_url>` and `<your_supabase_anon_key>` with your Supabase project URL and anon key, respectively.
+airodump-ng
 
-## Running the Project
+aireplay-ng
 
-1.  **Start the development server:**
+hcxpcapngtool (from hcxtools)
 
-    ```bash
-    npm run dev
-    ```
+Python Libraries:
+scapy
 
-2.  **Open the application** in your browser at `http://localhost:5173`.
+colorama
 
-## Supabase Setup
+tabulate
 
-1.  **Create a Supabase project** at [https://supabase.com/](https://supabase.com/).
+Install Python dependencies:
 
-2.  **Create the following tables** in your Supabase database:
+bash
+pip install -r requirements.txt
+📁 Project Structure
+text
+auto_aircrack_lab/
+├── auto_aircrack_lab.py  # Main script
+├── requirements.txt      # Python dependencies
+├── handshakes/          # Directory for captured handshakes
+├── wordlists/           # Directory for password wordlists
+├── results/             # Directory for cracked passwords
+└── README.md            # This file
+🖥️ Usage Examples
+Scan for networks:
 
-    **users**
+text
+sudo ./auto_aircrack_lab.py wlan0
+Select a target from the list
 
-    ```sql
-    CREATE TABLE users (
-        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-        username VARCHAR(255) NOT NULL UNIQUE,
-        email VARCHAR(255) NOT NULL UNIQUE,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc', now())
-    );
-    ```
+Capture handshake automatically
 
-    **posts**
+Crack with built-in wordlist or custom one
 
-    ```sql
-    CREATE TABLE posts (
-        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-        user_id UUID NOT NULL REFERENCES users(id),
-        content TEXT,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc', now())
-    );
-    ```
+Convert to Hashcat format for advanced cracking
 
-    **messages**
+🔧 Troubleshooting
+Monitor mode not working:
 
-    ```sql
-    CREATE TABLE messages (
-        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-        sender_id UUID NOT NULL REFERENCES users(id),
-        receiver_id UUID NOT NULL REFERENCES users(id),
-        content TEXT,
-        created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc', now())
-    );
-    ```
+Ensure your wireless card supports monitor mode
 
-3.  **Enable Authentication:**
+Check for conflicting processes with sudo airmon-ng check kill
 
-    *   Go to Authentication > Providers and enable Email/Password authentication.
+Handshake not captured:
 
-## Contributing
+Try increasing deauth packets or wait time
 
-Contributions are welcome! Please feel free to submit pull requests.
+Ensure you're close enough to the target network
 
-## License
+Dependencies missing:
 
-[MIT](LICENSE)
+Verify all required packages are installed: sudo apt install aircrack-ng hcxtools
+
+🤝 Contributing
+Contributions are welcome!
+
+Fork the repo
+
+Create a feature branch
+
+Submit a pull request
+
+📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🙏 Acknowledgments
+Aircrack-ng team for the excellent wireless tools
+
+Scapy project for packet manipulation capabilities
+
+Hashcat team for advanced password recovery techniques
+
